@@ -235,9 +235,9 @@ function closureFunc() {
 
 }
 const myFunc = closureFunc();
-console.log(myFunc())
-console.log(myFunc())
-console.log(myFunc())
+// console.log(myFunc())
+// console.log(myFunc())
+// console.log(myFunc())
 
 
 
@@ -249,9 +249,9 @@ console.log(myFunc())
 // JS classes 
 
 class names {
-    constructor (fName, lName) {
+    constructor(fName, lName) {
         this.fistName = fName,
-        this.lastName = lName
+            this.lastName = lName
     }
     fullName() {
         return this.fistName + ' ' + this.lastName
@@ -266,3 +266,88 @@ const rihim = new names('Rohim', 'Bekkol')
 const korimma = new names('Korim', 'Gadha')
 // console.log(korimma)
 // console.log(korimma.fullName())
+
+
+
+
+
+
+
+// JavaScript Class Inheritance
+
+// class car {
+//     constructor(fn, mod, fName) {
+//         this.name = fn;
+//         this.model = mod;
+//         this.fName = fName;
+//     }
+//     discoveredBy() {
+//         return this.fName;
+//     }
+// }
+
+// class carDetails extends car {
+//     constructor(fn, mod, fName, yr) {
+//         super(fn, mod, fName); // super mane upore, ortat uporer constructor k pawa
+//         this.year = yr;
+//     }
+//     run() {
+//         return this.discoveredBy() + "'s car" + ' is running';
+//     }
+// }
+
+// let inputNow = new carDetails('BMW', 'yu34i', 'Jhon', '2019');
+
+// console.log(inputNow.run()) ;
+// console.log(inputNow.name) ;
+// console.log(inputNow.model) ;
+// console.log(inputNow.year) ;
+// console.log(inputNow.fName) ;
+
+
+
+// set and get 
+
+// class newCar {
+//     constructor(cName) {
+//         this.Car = cName;
+//     }
+//     set(x) {
+//         this.Car = x;
+//     }
+//     get() {
+//         return this.Car;
+//     }
+// }
+// const inputNewCar = new newCar('Apachi');
+// inputNewCar.car2Name = 'Yamaha'
+// inputNewCar.car3Name = 'BMW'
+
+// console.log(inputNewCar.Car);
+// console.log(inputNewCar.car2Name);
+// console.log(inputNewCar.car3Name);
+
+
+
+// JS static 
+// এই মেথড বা প্রপার্টি ক্লাসের ইনস্ট্যান্স তৈরি না করেও সরাসরি ক্লাসের মাধ্যমেই অ্যাক্সেস করা যায়
+
+class car5 {
+    constructor(nam, year) {
+        this.carName = nam;
+        this.year = year;
+    }
+    static run() {
+        return 'Hello!';
+    }
+}
+
+const inputCar5 = new car5('BMW', 2017);
+// console.log(inputCar5.carName);
+
+// console.log(car5.run()) // cann't access wihtout using 'static'
+
+
+
+
+
