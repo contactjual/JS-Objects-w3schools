@@ -127,14 +127,32 @@ function getCertificate() {
     return getCertificatePromise;
 }
 
-// call promises 
+// call promises. This procces is not standerd. use aync-await
 
-enroll()
-    .then(progress)
-    .then(getCertificate)
-    .then(function(value){
-        console.log(value)
-    })
-    .catch(function (err) {
+// enroll()
+//     .then(progress)
+//     .then(getCertificate)
+//     .then(function(value){
+//         console.log(value)
+//     })
+//     .catch(function (err) {
+//         console.log(err)
+//     })
+
+
+
+// async await
+
+async function asyncAwaitFuntion() {
+    try {
+        await enroll();
+        await progress();
+        const massage = await getCertificate();
+        console.log(massage);
+    }
+    catch (err) {
         console.log(err)
-    })
+    }
+};
+
+// asyncAwaitFuntion();

@@ -16,7 +16,7 @@
 // });
 
 
-// promise calling
+// promise calling. 
 // myFistPromise
 //     .then(function (value) {
 //         console.log(value)
